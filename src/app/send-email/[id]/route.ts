@@ -64,7 +64,7 @@ export async function GET(
     const sentMessageInfo = await sendMail({
       from: process.env.MAILER_SENDER as string,
       to: res.fields["Courriel du participant"],
-      subject: `Normandie.ai // Merci ${res.fields["Prénom du participant"]} !`,
+      subject: `Pssst ${res.fields["Prénom du participant"]}, on a une annonce pour vous 🤫`,
       // pdfFile,
       template: RelanceTemplate(),
       ticketTypeName: res.fields["Type de billet"],
