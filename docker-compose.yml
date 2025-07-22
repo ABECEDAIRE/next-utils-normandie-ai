@@ -1,0 +1,18 @@
+services:
+  nextjs:
+    container_name: nextjs-scan
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - PAT=${PAT}
+      - BASE_URL=${BASE_URL}
+      - NEXT_PUBLIC_API_URL=${NEXT_PUBLIC_API_URL}
+      - MAILER_HOST=${MAILER_HOST}
+      - MAILER_USER=${MAILER_USER}
+      - MAILER_PASSWORD=${MAILER_PASSWORD}
+      - MAILER_SENDER=${MAILER_SENDER}
+    restart: unless-stopped
