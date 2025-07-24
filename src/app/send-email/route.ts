@@ -109,6 +109,7 @@ export async function POST() {
         "Processing completed. Emails have been sent for the 100 records.",
     });
   } catch (error) {
+    console.log("🚀 ~ POST ~ error:", error);
     Sentry.captureException(error);
     return Response.json(
       {
