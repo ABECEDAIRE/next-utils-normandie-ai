@@ -15,7 +15,7 @@ export async function POST() {
 
     // get all records
     const req = await fetch(
-      `${baseUrl}?filterByFormula=AND(OR(relanceStatus='toRelance',relanceStatus='error'),OR(visite='new',visite='visited'),OR({Type de billet}='Normandie.ai // Ticket d\'accès VIP',{Type de billet}='Normandie.ai // Ticket d\'accès professionnel'))`,
+      `${baseUrl}/?filterByFormula=AND(OR(relanceStatus='toRelance',relanceStatus='error'),OR(visite='new',visite='visited'),OR({Type de billet}='Normandie.ai // Ticket d\'accès VIP',{Type de billet}='Normandie.ai // Ticket d\'accès professionnel'))`,
       {
         headers: {
           Authorization: `Bearer ${PAT}`,
